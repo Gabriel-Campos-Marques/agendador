@@ -1,6 +1,6 @@
+import 'package:agendador/router/app_router.dart';
 import 'package:agendador/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'Screen/favoritos.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,9 +14,11 @@ class Agendador extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: _appTheme.theme(),
-      home: const Favoritos(),
+      routeInformationParser: routes.routeInformationParser,
+      routeInformationProvider: routes.routeInformationProvider,
+      routerDelegate: routes.routerDelegate,
     );
   }
 }
