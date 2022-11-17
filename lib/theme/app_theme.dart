@@ -10,7 +10,23 @@ class AppTheme {
 
   //Text
   TextStyle textoPadraoAppBar =
-      GoogleFonts.roboto(fontSize: 36, fontWeight: FontWeight.w900);
+      GoogleFonts.roboto(fontSize: 32, fontWeight: FontWeight.w900);
+
+  TextStyle textoTituloCalendario = GoogleFonts.roboto(
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
+      color: Color.fromARGB(255, 255, 255, 255));
+
+  TextStyle textoCalendario =
+      GoogleFonts.roboto(fontSize: 16, fontWeight: FontWeight.w700);
+
+  TextStyle diaSelecionado = GoogleFonts.roboto(
+      color: Color.fromARGB(255, 0, 26, 64),
+      fontSize: 16,
+      fontWeight: FontWeight.w700);
+
+  TextStyle textoCalendarioFimDeSemana = GoogleFonts.roboto(
+      color: Colors.white, fontSize: 16, fontWeight: FontWeight.w700);
 
   TextStyle textoPadrao = GoogleFonts.roboto(
       fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white);
@@ -31,14 +47,16 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         backgroundColor: primary,
         elevation: 0,
-        titleSpacing: 30,
         titleTextStyle: textoPadraoAppBar,
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.all(10),
-          backgroundColor: secondary,
-          textStyle: TextStyle(color: Colors.black),
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+          backgroundColor: MaterialStateProperty.all(secondary),
         ),
       ),
     );

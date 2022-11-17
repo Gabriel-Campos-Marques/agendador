@@ -13,7 +13,7 @@ class Favoritos extends StatelessWidget {
       builder: (context, constrainst) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Favoritos'),
+            title: const Center(child: Text('Favoritos')),
           ),
           body: Container(
             width: double.maxFinite,
@@ -65,7 +65,7 @@ class Cards extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
-                    'images/aula_violao_persona_centro_ensino1.jpg',
+                    'images/AtivaIdade.jpg',
                     fit: BoxFit.cover,
                     width: double.infinity,
                   ),
@@ -92,7 +92,7 @@ class Cards extends StatelessWidget {
                             child: SizedBox(
                               width: width * .5,
                               child: Text(
-                                'Aula de Violão com Marcos',
+                                'Academia AtivaIdade',
                                 style: _appTheme.textoPadrao,
                                 overflow: TextOverflow.ellipsis,
                               ),

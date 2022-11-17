@@ -1,5 +1,6 @@
 import 'package:agendador/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 final AppTheme _appTheme = AppTheme();
 
@@ -23,25 +24,45 @@ class Empresa extends StatelessWidget {
                   height: constraints.maxHeight,
                   width: constraints.maxWidth,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Container(
-                    height: constraints.maxHeight * .1,
-                    width: constraints.maxWidth * .6,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Reservar',
-                        style: _appTheme.textoBotoes,
-                      ),
-                    ),
-                  ),
-                ),
+                Reservar(
+                    height: constraints.maxHeight, width: constraints.maxWidth),
               ],
             ),
           ),
         );
       },
+    );
+  }
+}
+
+class Reservar extends StatelessWidget {
+  const Reservar({
+    Key? key,
+    required this.height,
+    required this.width,
+  }) : super(key: key);
+
+  final double height;
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: SizedBox(
+        height: height * .1,
+        width: width * .6,
+        child: ElevatedButton(
+          onPressed: () {
+            context
+                .push('/favoritos/empresa/reserva_empresa_seleciona_servico');
+          },
+          child: Text(
+            'Reservar',
+            style: _appTheme.textoBotoes,
+          ),
+        ),
+      ),
     );
   }
 }
