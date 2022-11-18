@@ -64,30 +64,23 @@ class Servicos extends StatelessWidget {
         alignment: AlignmentDirectional.center,
         children: [
           Container(
-            height: height * .25,
-            width: width * .42,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-                boxShadow: const [
-                  BoxShadow(
-                      color: Color.fromARGB(255, 0, 0, 0),
-                      offset: Offset(1, 1),
-                      spreadRadius: 2,
-                      blurRadius: 10)
-                ]),
-          ),
-          Container(
-            height: height * .232,
-            width: width * .39,
+            height: 160,
+            width: 160,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: _appTheme.primary,
+              color: Color.fromARGB(255, 174, 174, 174),
+              boxShadow: const [
+                BoxShadow(
+                    color: Colors.black,
+                    offset: Offset(5, 5),
+                    blurRadius: 10,
+                    blurStyle: BlurStyle.normal),
+              ],
             ),
           ),
           Container(
-            height: height * .22,
-            width: width * .37,
+            height: 150,
+            width: 150,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: _appTheme.secondary,
@@ -98,11 +91,12 @@ class Servicos extends StatelessWidget {
                 const Icon(
                   Icons.search,
                   size: 36,
+                  color: Color.fromARGB(174, 0, 0, 0),
                 ),
                 Center(
                   child: Text(
                     'Academia',
-                    style: _appTheme.textoBotoes,
+                    style: _appTheme.textoServicos,
                   ),
                 ),
               ],
