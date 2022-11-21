@@ -1,4 +1,4 @@
-import 'package:agendador/Screen/Login/cadastro.dart';
+import 'package:agendador/Screen/Login/cadastro_usuario.dart';
 import 'package:agendador/Screen/empresa.dart';
 import 'package:agendador/Screen/favoritos.dart';
 import 'package:agendador/Screen/home_screen.dart';
@@ -8,7 +8,7 @@ import 'package:agendador/Screen/reserva_empresa_seleciona_servico.dart';
 import 'package:go_router/go_router.dart';
 
 final routes = GoRouter(
-  initialLocation: '/Login',
+  initialLocation: '/login',
   routes: [
     GoRoute(
       path: '/',
@@ -32,7 +32,7 @@ final routes = GoRouter(
     ),
     GoRoute(
       path: '/favoritos/empresa/reserva_empresa_seleciona_servico',
-      builder: (context, state) => SelecionaServico(),
+      builder: (context, state) => const SelecionaServico(),
     ),
     GoRoute(
         path: '/favoritos/empresa/reserva_empresa_seleciona_dia',

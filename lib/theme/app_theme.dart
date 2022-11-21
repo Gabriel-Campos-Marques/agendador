@@ -11,9 +11,7 @@ class AppTheme {
 
   //Text
   TextStyle textoPadraoAppBar = GoogleFonts.roboto(
-    fontSize: 32,
-    fontWeight: FontWeight.w900,
-  );
+      fontSize: 32, fontWeight: FontWeight.w900, color: Colors.white);
 
   TextStyle textoServicos = GoogleFonts.roboto(
     fontSize: 28,
@@ -24,7 +22,7 @@ class AppTheme {
   TextStyle textoLabel = GoogleFonts.roboto(
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: Colors.white,
+    color: const Color.fromARGB(150, 255, 255, 255),
   );
 
   TextStyle textoFormField = GoogleFonts.roboto(

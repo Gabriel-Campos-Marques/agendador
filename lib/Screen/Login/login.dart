@@ -22,12 +22,17 @@ class Login extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 36.0),
+                    padding: const EdgeInsets.only(top: 64.0),
                     child: Container(
                       height: 200,
                       width: 200,
                       decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: _appTheme.secondary),
+                        shape: BoxShape.circle,
+                        color: _appTheme.secondary,
+                        image: const DecorationImage(
+                          image: AssetImage('images/logo.jpg'),
+                        ),
+                      ),
                     ),
                   ),
                   LoginPassword(
@@ -135,10 +140,8 @@ class LoginPassword extends StatelessWidget {
               showCursor: false,
               style: _appTheme.textoFormField,
               decoration: InputDecoration(
-                floatingLabelAlignment: FloatingLabelAlignment.start,
-                floatingLabelStyle:
-                    TextStyle(fontSize: 20, color: _appTheme.primary),
                 label: const Text('Login'),
+                labelStyle: _appTheme.textoLabel,
                 border: InputBorder.none,
               ),
             ),
@@ -159,9 +162,7 @@ class LoginPassword extends StatelessWidget {
                 showCursor: false,
                 style: _appTheme.textoFormField,
                 decoration: InputDecoration(
-                  floatingLabelAlignment: FloatingLabelAlignment.start,
-                  floatingLabelStyle:
-                      TextStyle(fontSize: 20, color: _appTheme.primary),
+                  labelStyle: _appTheme.textoLabel,
                   label: const Text('Senha'),
                   border: InputBorder.none,
                 ),
