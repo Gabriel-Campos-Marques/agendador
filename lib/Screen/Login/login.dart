@@ -76,7 +76,7 @@ class Botoes extends StatelessWidget {
               style: ButtonStyle(
                 shape: MaterialStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(5),
                   ),
                 ),
                 backgroundColor: MaterialStateProperty.all(
@@ -132,7 +132,7 @@ class LoginPassword extends StatelessWidget {
           height: height * .1,
           width: width * .8,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(45),
+              borderRadius: BorderRadius.circular(5),
               color: _appTheme.tertiary),
           child: Padding(
             padding: const EdgeInsets.only(left: 32.0),
@@ -153,7 +153,7 @@ class LoginPassword extends StatelessWidget {
             height: height * .1,
             width: width * .8,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(45),
+                borderRadius: BorderRadius.circular(5),
                 color: _appTheme.tertiary),
             child: Padding(
               padding: const EdgeInsets.only(left: 32.0),

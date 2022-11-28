@@ -1,4 +1,7 @@
+import 'package:agendador/Screen/Login/cadastro_empresa.dart';
+import 'package:agendador/Screen/Login/cadastro_informacao_empresa.dart';
 import 'package:agendador/Screen/Login/cadastro_usuario.dart';
+import 'package:agendador/Screen/Login/seleciona_usuario_empresa.dart';
 import 'package:agendador/Screen/empresa.dart';
 import 'package:agendador/Screen/favoritos.dart';
 import 'package:agendador/Screen/home_screen.dart';
@@ -20,7 +23,19 @@ final routes = GoRouter(
     ),
     GoRoute(
       path: '/login/cadastre-se',
-      builder: (context, state) => const Cadastro(),
+      builder: (context, state) => const SelecionaUsuarioEmpresa(),
+    ),
+    GoRoute(
+      path: '/login/cadastre-se/cadastroUsuario',
+      builder: (context, state) => const CadastroUsuario(),
+    ),
+    GoRoute(
+      path: '/login/cadastre-se/cadastroEmpresa',
+      builder: (context, state) => const CadastroEmpresa(),
+    ),
+    GoRoute(
+      path: '/login/cadastre-se/cadastroEmpresa/servicosEmpresa',
+      builder: (context, state) => CadastroServicoEmpresa(),
     ),
     GoRoute(
       path: '/favoritos',

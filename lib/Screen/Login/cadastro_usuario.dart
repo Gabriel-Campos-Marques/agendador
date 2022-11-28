@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 final AppTheme _appTheme = AppTheme();
 
-class Cadastro extends StatelessWidget {
-  const Cadastro({super.key});
+class CadastroUsuario extends StatelessWidget {
+  const CadastroUsuario({super.key});
 
   @override
   Widget build(BuildContext context) {

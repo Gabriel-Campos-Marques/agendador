@@ -13,6 +13,15 @@ class AppTheme {
   TextStyle textoPadraoAppBar = GoogleFonts.roboto(
       fontSize: 32, fontWeight: FontWeight.w900, color: Colors.white);
 
+  TextStyle textoTitulos = GoogleFonts.roboto(
+      fontSize: 32, fontWeight: FontWeight.w900, color: Colors.white);
+
+  TextStyle textoSelecaoUsuarioEmpresa = GoogleFonts.roboto(
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+    color: const Color.fromARGB(255, 255, 255, 255),
+  );
+
   TextStyle textoServicos = GoogleFonts.roboto(
     fontSize: 28,
     fontWeight: FontWeight.w700,
@@ -23,6 +32,11 @@ class AppTheme {
     fontSize: 18,
     fontWeight: FontWeight.w600,
     color: const Color.fromARGB(150, 255, 255, 255),
+  );
+
+  TextStyle textoHint = GoogleFonts.roboto(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
   );
 
   TextStyle textoFormField = GoogleFonts.roboto(
