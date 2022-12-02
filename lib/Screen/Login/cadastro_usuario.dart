@@ -26,10 +26,10 @@ class CadastroUsuario extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(top: 30.0),
                     child: Center(
                       child: Text(
-                        'Cadastro',
+                        'Cadastro Usuário',
                         style: _appTheme.textoPadraoAppBar,
                       ),
                     ),
@@ -132,7 +132,7 @@ class TextInput extends StatelessWidget {
         width: width * .85,
         decoration: BoxDecoration(
           color: _appTheme.tertiary,
-          borderRadius: BorderRadius.circular(45),
+          borderRadius: BorderRadius.circular(5),
         ),
         child: Padding(
           padding: const EdgeInsets.only(left: 18.0),
@@ -171,7 +171,7 @@ class Cadastrar extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(_appTheme.tertiary),
           shape: MaterialStateProperty.all(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(45),
+              borderRadius: BorderRadius.circular(5),
             ),
           ),
         ),

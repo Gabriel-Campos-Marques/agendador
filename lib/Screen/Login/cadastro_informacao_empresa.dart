@@ -114,7 +114,10 @@ class Avancar extends StatelessWidget {
               ),
               backgroundColor: MaterialStateProperty.all(_appTheme.tertiary),
             ),
-            onPressed: (() {}),
+            onPressed: (() {
+              context.push(
+                  '/login/cadastre-se/cadastroEmpresa/servicosEmpresa/cadastroEmpresaFinalizado');
+            }),
             child: Text(
               'Avançar',
               style: _appTheme.textoBotoes,
@@ -168,8 +171,8 @@ class InformacoesEmpresa extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(right: 16.0),
                 child: Icon(
-                  Icons.error,
-                  color: Colors.red,
+                  Icons.add,
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
               )
             ],

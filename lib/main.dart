@@ -1,10 +1,14 @@
 import 'package:agendador/router/app_router.dart';
+import 'package:agendador/services/checkplan_service.dart';
 import 'package:agendador/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(Agendador());
+
+  CheckPlanService service = CheckPlanService();
+  service.register("Quase la projeto");
 }
 
 class Agendador extends StatelessWidget {

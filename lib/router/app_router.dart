@@ -1,17 +1,19 @@
 import 'package:agendador/Screen/Login/cadastro_empresa.dart';
+import 'package:agendador/Screen/Login/cadastro_empresa_finalizado.dart';
 import 'package:agendador/Screen/Login/cadastro_informacao_empresa.dart';
 import 'package:agendador/Screen/Login/cadastro_usuario.dart';
 import 'package:agendador/Screen/Login/seleciona_usuario_empresa.dart';
-import 'package:agendador/Screen/empresa.dart';
-import 'package:agendador/Screen/favoritos.dart';
+import 'package:agendador/Screen/descricao_empresa.dart';
+import 'package:agendador/Screen/Favoritos/favoritos.dart';
 import 'package:agendador/Screen/home_screen.dart';
 import 'package:agendador/Screen/Login/login.dart';
 import 'package:agendador/Screen/reserva_empresa_seleciona_dia.dart';
 import 'package:agendador/Screen/reserva_empresa_seleciona_servico.dart';
+import 'package:agendador/Screen/reserva_horario.dart';
 import 'package:go_router/go_router.dart';
 
 final routes = GoRouter(
-  initialLocation: '/login',
+  initialLocation: '/favoritos',
   routes: [
     GoRoute(
       path: '/',
@@ -38,6 +40,11 @@ final routes = GoRouter(
       builder: (context, state) => CadastroServicoEmpresa(),
     ),
     GoRoute(
+      path:
+          '/login/cadastre-se/cadastroEmpresa/servicosEmpresa/cadastroEmpresaFinalizado',
+      builder: (context, state) => CadastroConcluido(),
+    ),
+    GoRoute(
       path: '/favoritos',
       builder: (context, state) => const Favoritos(),
     ),
@@ -50,7 +57,12 @@ final routes = GoRouter(
       builder: (context, state) => const SelecionaServico(),
     ),
     GoRoute(
-        path: '/favoritos/empresa/reserva_empresa_seleciona_dia',
-        builder: (context, state) => SelecionarDia()),
+      path: '/favoritos/empresa/reserva_empresa_seleciona_dia',
+      builder: (context, state) => SelecionarDia(),
+    ),
+    GoRoute(
+      path: '/favoritos/empresa/reserva_empresa_seleciona_horario',
+      builder: (context, state) => ReservaHorario(),
+    ),
   ],
 );

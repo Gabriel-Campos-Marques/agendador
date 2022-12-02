@@ -39,7 +39,7 @@ class SelecionaUsuarioEmpresa extends StatelessWidget {
                               .push('/login/cadastre-se/cadastroUsuario'),
                           child: Text(
                             textAlign: TextAlign.center,
-                            'Usuario',
+                            'Usuário',
                             style: _appTheme.textoSelecaoUsuarioEmpresa,
                           )),
                     ),

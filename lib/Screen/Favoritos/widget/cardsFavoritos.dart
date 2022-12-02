@@ -2,40 +2,19 @@ import 'package:agendador/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../model/empresa.dart';
+import '../favoritos.dart';
+
 final AppTheme _appTheme = AppTheme();
 
-class Favoritos extends StatelessWidget {
-  const Favoritos({Key? key}) : super(key: key);
+class CardsFavoritos extends StatelessWidget {
+  const CardsFavoritos(
+      {super.key,
+      required this.height,
+      required this.width,
+      required this.empresa});
 
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constrainst) {
-        return Scaffold(
-          appBar: AppBar(
-            title: const Center(child: Text('Favoritos')),
-          ),
-          body: Container(
-            width: double.maxFinite,
-            height: double.maxFinite,
-            color: _appTheme.primary,
-            child: Column(
-              children: [
-                Cards(
-                  height: constrainst.maxHeight,
-                  width: constrainst.maxWidth,
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-}
-
-class Cards extends StatelessWidget {
-  const Cards({super.key, required this.height, required this.width});
+  final Empresa? empresa;
 
   final double height;
   final double width;
@@ -65,7 +44,7 @@ class Cards extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
-                    'images/AtivaIdade.jpg',
+                    empresa!.imagem,
                     fit: BoxFit.cover,
                     width: double.infinity,
                   ),
@@ -92,7 +71,7 @@ class Cards extends StatelessWidget {
                             child: SizedBox(
                               width: width * .5,
                               child: Text(
-                                'Academia AtivaIdade',
+                                empresa!.nome,
                                 style: _appTheme.textoPadrao,
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -107,7 +86,7 @@ class Cards extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Text(
-                              '(19) 3466-6069',
+                              empresa!.telefone,
                               style: _appTheme.textoPadrao,
                             ),
                           ),
@@ -132,46 +111,6 @@ class Cards extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class IconStar extends StatelessWidget {
-  const IconStar({super.key, required this.height, required this.width});
-
-  final double height;
-  final double width;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(
-          Icons.star,
-          size: height * .03,
-          color: _appTheme.star,
-        ),
-        Icon(
-          Icons.star,
-          size: height * .03,
-          color: _appTheme.star,
-        ),
-        Icon(
-          Icons.star,
-          size: height * .03,
-          color: _appTheme.star,
-        ),
-        Icon(
-          Icons.star,
-          size: height * .03,
-          color: _appTheme.star,
-        ),
-        Icon(
-          Icons.star,
-          size: height * .03,
-          color: _appTheme.star,
-        ),
-      ],
     );
   }
 }

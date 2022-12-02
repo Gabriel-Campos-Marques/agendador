@@ -53,6 +53,15 @@ class Reservar extends StatelessWidget {
         height: height * .1,
         width: width * .6,
         child: ElevatedButton(
+          style: ButtonStyle(
+            elevation: MaterialStateProperty.all(15),
+            shape: MaterialStateProperty.all(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+              ),
+            ),
+            backgroundColor: MaterialStateProperty.all(_appTheme.tertiary),
+          ),
           onPressed: () {
             context
                 .push('/favoritos/empresa/reserva_empresa_seleciona_servico');
@@ -106,7 +115,7 @@ class DescricaoEmpresa extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: SizedBox(
-        height: height * .2,
+        height: height * .18,
         child: SingleChildScrollView(
           child: Text(
             'Quem Somos?'
@@ -161,14 +170,27 @@ class TituloEmpresa extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 8.0, top: 8.0),
-        child: Text(
-          'Academia AtivaIdade',
-          style: _appTheme.textoNomeEmpresa,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        SizedBox(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8.0, top: 8.0),
+            child: Text(
+              'Academia Ativa',
+              style: _appTheme.textoNomeEmpresa,
+            ),
+          ),
         ),
-      ),
+        Padding(
+          padding: const EdgeInsets.only(right: 8.0, top: 8),
+          child: Icon(
+            Icons.bookmark,
+            size: 40,
+            color: _appTheme.secondary,
+          ),
+        )
+      ],
     );
   }
 }
@@ -243,7 +265,7 @@ class IconsSocialNetwork extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(
-                  '(19) 99153 - 7169',
+                  '(19) 99169 - 6600',
                   style: _appTheme.textoPadrao,
                 ),
               )
@@ -281,7 +303,7 @@ class IconsSocialNetwork extends StatelessWidget {
               SizedBox(
                 width: width * .9,
                 child: Text(
-                  'Rua Paschoal Travaglia 226 - Americana - SP',
+                  'Rua Paschoal Critine 226 - Sumbial - SP',
                   overflow: TextOverflow.ellipsis,
                   style: _appTheme.textoPadrao,
                 ),

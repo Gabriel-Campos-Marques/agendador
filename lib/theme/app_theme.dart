@@ -25,7 +25,7 @@ class AppTheme {
   TextStyle textoServicos = GoogleFonts.roboto(
     fontSize: 28,
     fontWeight: FontWeight.w700,
-    color: Color.fromARGB(174, 0, 0, 0),
+    color: const Color.fromARGB(174, 0, 0, 0),
   );
 
   TextStyle textoLabel = GoogleFonts.roboto(
@@ -48,7 +48,7 @@ class AppTheme {
   TextStyle textoTituloCalendario = GoogleFonts.roboto(
       fontSize: 24,
       fontWeight: FontWeight.w700,
-      color: Color.fromARGB(255, 255, 255, 255));
+      color: const Color.fromARGB(255, 255, 255, 255));
 
   TextStyle textoCalendario = GoogleFonts.roboto(
     fontSize: 16,
@@ -56,7 +56,7 @@ class AppTheme {
   );
 
   TextStyle diaSelecionado = GoogleFonts.roboto(
-    color: Color.fromARGB(255, 0, 26, 64),
+    color: const Color.fromARGB(255, 0, 26, 64),
     fontSize: 16,
     fontWeight: FontWeight.w700,
   );
@@ -69,7 +69,7 @@ class AppTheme {
 
   TextStyle textoPadrao = GoogleFonts.roboto(
     fontSize: 16,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     color: Colors.white,
   );
 

@@ -1,6 +1,7 @@
 import 'package:agendador/Components/calendar.dart';
 import 'package:agendador/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SelecionarDia extends StatefulWidget {
   SelecionarDia({super.key});
@@ -47,7 +48,20 @@ class _SelecionarDiaState extends State<SelecionarDia> {
                     height: constraints.maxHeight * .1,
                     width: constraints.maxWidth * .6,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      style: ButtonStyle(
+                        elevation: MaterialStateProperty.all(15),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+                        backgroundColor:
+                            MaterialStateProperty.all(_appTheme.tertiary),
+                      ),
+                      onPressed: () {
+                        context.push(
+                            '/favoritos/empresa/reserva_empresa_seleciona_horario');
+                      },
                       child: Text(
                         'Avançar',
                         style: _appTheme.textoBotoes,
