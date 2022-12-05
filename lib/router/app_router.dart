@@ -37,12 +37,12 @@ final routes = GoRouter(
     ),
     GoRoute(
       path: '/login/cadastre-se/cadastroEmpresa/servicosEmpresa',
-      builder: (context, state) => CadastroServicoEmpresa(),
+      builder: (context, state) => const CadastroServicoEmpresa(),
     ),
     GoRoute(
       path:
           '/login/cadastre-se/cadastroEmpresa/servicosEmpresa/cadastroEmpresaFinalizado',
-      builder: (context, state) => CadastroConcluido(),
+      builder: (context, state) => const CadastroConcluido(),
     ),
     GoRoute(
       path: '/favoritos',
@@ -58,11 +58,11 @@ final routes = GoRouter(
     ),
     GoRoute(
       path: '/favoritos/empresa/reserva_empresa_seleciona_dia',
-      builder: (context, state) => SelecionarDia(),
+      builder: (context, state) => const SelecionarDia(),
     ),
     GoRoute(
       path: '/favoritos/empresa/reserva_empresa_seleciona_horario',
-      builder: (context, state) => ReservaHorario(),
+      builder: (context, state) => const ReservaHorario(),
     ),
   ],
 );

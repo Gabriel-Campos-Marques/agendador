@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:agendador/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -14,7 +16,7 @@ class CardsFavoritos extends StatelessWidget {
       required this.width,
       required this.empresa});
 
-  final Empresa? empresa;
+  final Empresa empresa;
 
   final double height;
   final double width;
@@ -44,7 +46,7 @@ class CardsFavoritos extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: Image.asset(
-                    empresa!.imagem,
+                    empresa.imagem!,
                     fit: BoxFit.cover,
                     width: double.infinity,
                   ),
@@ -71,7 +73,7 @@ class CardsFavoritos extends StatelessWidget {
                             child: SizedBox(
                               width: width * .5,
                               child: Text(
-                                empresa!.nome,
+                                empresa.nome!,
                                 style: _appTheme.textoPadrao,
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -86,7 +88,7 @@ class CardsFavoritos extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: Text(
-                              empresa!.telefone,
+                              empresa.telefone!,
                               style: _appTheme.textoPadrao,
                             ),
                           ),

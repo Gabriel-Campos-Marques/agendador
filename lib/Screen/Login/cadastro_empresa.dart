@@ -21,25 +21,23 @@ class CadastroEmpresa extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 50.0),
-                          child: Text(
-                            'Cadastrar Empresa',
-                            style: _appTheme.textoPadraoAppBar,
-                          ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 50.0),
+                        child: Text(
+                          'Cadastrar Empresa',
+                          style: _appTheme.textoPadraoAppBar,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 32.0),
-                          child: Formulario(
-                            heigth: constraints.maxHeight,
-                            width: constraints.maxWidth,
-                          ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 32.0),
+                        child: Formulario(
+                          heigth: constraints.maxHeight,
+                          width: constraints.maxWidth,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                   Cadastrar(
                     heigth: constraints.maxHeight,
@@ -56,7 +54,7 @@ class CadastroEmpresa extends StatelessWidget {
 }
 
 class Formulario extends StatefulWidget {
-  Formulario({
+  const Formulario({
     Key? key,
     required this.heigth,
     required this.width,

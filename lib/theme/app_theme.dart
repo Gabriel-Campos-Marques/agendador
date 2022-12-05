@@ -82,7 +82,7 @@ class AppTheme {
   TextStyle textoBotoes = GoogleFonts.roboto(
       fontSize: 24,
       fontWeight: FontWeight.w400,
-      color: Color.fromARGB(255, 255, 255, 255));
+      color: const Color.fromARGB(255, 255, 255, 255));
 
   TextTheme textTheme = GoogleFonts.robotoTextTheme();
 

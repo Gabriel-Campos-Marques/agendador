@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class SelecionarDia extends StatefulWidget {
-  SelecionarDia({super.key});
+  const SelecionarDia({super.key});
 
   @override
   State<SelecionarDia> createState() => _SelecionarDiaState();
@@ -34,7 +34,7 @@ class _SelecionarDiaState extends State<SelecionarDia> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: const Color.fromARGB(255, 0, 0, 0),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
@@ -44,7 +44,7 @@ class _SelecionarDiaState extends State<SelecionarDia> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Container(
+                  child: SizedBox(
                     height: constraints.maxHeight * .1,
                     width: constraints.maxWidth * .6,
                     child: ElevatedButton(

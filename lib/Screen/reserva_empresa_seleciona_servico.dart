@@ -68,7 +68,7 @@ class Servicos extends StatelessWidget {
             width: 160,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Color.fromARGB(255, 174, 174, 174),
+              color: const Color.fromARGB(255, 174, 174, 174),
               boxShadow: const [
                 BoxShadow(
                     color: Colors.black,

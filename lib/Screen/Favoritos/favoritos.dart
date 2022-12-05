@@ -1,12 +1,28 @@
 import 'package:agendador/Screen/Favoritos/widget/cardsFavoritos.dart';
 import 'package:agendador/model/empresa.dart';
+import 'package:agendador/services/checkplan_service.dart';
 import 'package:agendador/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 final AppTheme _appTheme = AppTheme();
 
-class Favoritos extends StatelessWidget {
+class Favoritos extends StatefulWidget {
   const Favoritos({Key? key}) : super(key: key);
+
+  @override
+  State<Favoritos> createState() => _FavoritosState();
+}
+
+class _FavoritosState extends State<Favoritos> {
+  Future<List<Empresa>>? empresas;
+  final CheckPlanService service = CheckPlanService();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    empresas = service.getAll();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,28 +33,45 @@ class Favoritos extends StatelessWidget {
             title: const Center(child: Text('Favoritos')),
           ),
           bottomNavigationBar: BottomNavigator(height: constrainst.maxHeight),
-          body: Container(
-            height: double.maxFinite,
-            width: double.maxFinite,
-            color: _appTheme.primary,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Center(
-                  child: CardsFavoritos(
-                    empresa: Empresa(
-                        nome: 'Gabriel',
-                        avaliacao: 'Gabriel',
-                        telefone: '984291707',
-                        descricao: 'Gabriel',
-                        endereco: 'Rua Paschoal',
-                        imagem: 'images/AtivaIdade.jpg'),
-                    height: constrainst.maxHeight,
-                    width: constrainst.maxWidth,
+          body: SingleChildScrollView(
+            child: Container(
+              height: double.maxFinite,
+              width: double.maxFinite,
+              color: _appTheme.primary,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Center(
+                    child: FutureBuilder<List<Empresa>>(
+                      future: empresas,
+                      builder: (context, snapshot) {
+                        if (snapshot.hasData) {
+                          return const CircularProgressIndicator();
+                        }
+                        return ListView.builder(
+                          itemCount: snapshot.data?.length,
+                          itemBuilder: (context, index) {
+                            var data = snapshot.data![index];
+                            return CardsFavoritos(
+                              empresa: Empresa(
+                                  nome: data.nome,
+                                  avaliacao: data.avaliacao,
+                                  telefone: data.telefone,
+                                  descricao: data.descricao,
+                                  endereco: data.endereco,
+                                  imagem: data.imagem,
+                                  redesocial: data.redesocial),
+                              height: constrainst.maxHeight,
+                              width: constrainst.maxWidth,
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );

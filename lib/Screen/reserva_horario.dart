@@ -26,7 +26,7 @@ class ReservaHorario extends StatelessWidget {
                     style: _appTheme.textoPadraoAppBar,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Column(
                   children: [
                     Row(
@@ -103,10 +103,10 @@ class ReservaHorario extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 16.0),
-                  child: Container(
+                  child: SizedBox(
                     height: constraints.maxHeight * .1,
                     width: constraints.maxWidth * .6,
                     child: ElevatedButton(

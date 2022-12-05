@@ -158,7 +158,7 @@ class InformacoesEmpresa extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 16.0),
+                padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
                   text,
                   textAlign: TextAlign.start,
@@ -168,7 +168,7 @@ class InformacoesEmpresa extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(right: 16.0),
                 child: Icon(
                   Icons.add,

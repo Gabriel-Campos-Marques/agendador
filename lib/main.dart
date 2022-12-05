@@ -1,3 +1,4 @@
+import 'package:agendador/model/empresa.dart';
 import 'package:agendador/router/app_router.dart';
 import 'package:agendador/services/checkplan_service.dart';
 import 'package:agendador/theme/app_theme.dart';
@@ -8,7 +9,8 @@ void main() {
   runApp(Agendador());
 
   CheckPlanService service = CheckPlanService();
-  service.register("Quase la projeto");
+  service.register(Empresa.empty());
+  service.getAll();
 }
 
 class Agendador extends StatelessWidget {

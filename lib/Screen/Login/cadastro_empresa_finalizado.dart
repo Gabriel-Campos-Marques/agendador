@@ -18,9 +18,9 @@ class CadastroConcluido extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 100.0),
-                  child: const Concluido(),
+                const Padding(
+                  padding: EdgeInsets.only(top: 100.0),
+                  child: Concluido(),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 16.0),
@@ -64,7 +64,7 @@ class Concluido extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.green,
           ),

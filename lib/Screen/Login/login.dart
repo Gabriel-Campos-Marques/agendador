@@ -96,7 +96,7 @@ class Botoes extends StatelessWidget {
             return context.push('/login/cadastre-se');
           },
           child: Padding(
-            padding: EdgeInsets.only(bottom: 16.0),
+            padding: const EdgeInsets.only(bottom: 16.0),
             child: Text(
               'Cadastre-se',
               style: TextStyle(
@@ -104,7 +104,7 @@ class Botoes extends StatelessWidget {
                 decorationColor: Colors.white,
                 fontSize: 16,
                 fontStyle: GoogleFonts.roboto().fontStyle,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
               ),
             ),
           ),
